@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "views",
+  "info": {
+    "singularName": "view",
+    "pluralName": "views",
+    "displayName": "view"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "img_theme": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

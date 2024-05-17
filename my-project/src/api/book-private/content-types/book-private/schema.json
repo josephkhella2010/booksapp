@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "book_privates",
+  "info": {
+    "singularName": "book-private",
+    "pluralName": "book-privates",
+    "displayName": "bookPrivate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rateValue": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "number_of_page": {
+      "type": "integer"
+    },
+    "publish_date": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "book_privates"
+    },
+    "rates": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::rate.rate",
+      "inversedBy": "book_privates"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

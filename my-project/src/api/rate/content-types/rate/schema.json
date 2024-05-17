@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rates",
+  "info": {
+    "singularName": "rate",
+    "pluralName": "rates",
+    "displayName": "rate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rate": {
+      "type": "string"
+    },
+    "rate_book": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::book.book",
+      "inversedBy": "rates"
+    },
+    "book_privates": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::book-private.book-private",
+      "mappedBy": "rates"
+    }
+  }
+}

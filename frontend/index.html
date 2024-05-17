@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b9cdc1c9a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../foto/logo 1.png">
+        </div>
+        <ul>
+            <li><a href="./index.html">home</a></li>
+
+            <li><span class="num">0</span><a href="./profile.html">favorarte book</a></li>
+
+            <li id="login-link"><a href="#">logga in</a></li>
+            <li id="register-link"><a href="#">register</a></li>
+            <li id="logout-link"><a href="#">logout</a></li>
+
+        </ul>
+        <div class="choosen-book"></div>
+
+    </nav>
+    <header>
+        <h1 class="h1">Book Application</h1>
+    </header>
+    <main class="wrapper">
+        <div class="search-div">
+            <input type="text" placeholder="Search By Author name or Book name" id="search-bar">
+            <!-- <button id="search">search</button> -->
+        </div>
+        <h2 id="name-of-user"></h2>
+        <!-- sortering div -->
+        <div class="sortering-container">
+            <div class="sortering">
+                <h3>sortering for title</h3>
+
+                <label for="AZ">
+            <input type="radio" name="sortering" value="AZ"  id="AZ">
+            From A to Z
+       </label>
+                <label for="ZA">
+             <input type="radio" name="sortering" value="ZA"  id="ZA">
+             From Z to A
+        </label>
+            </div>
+        </div>
+
+        <!-- sortering div -->
+
+        <div class="book-list">
+            <!-- <div class="section">
+            <img src="../foto/book1.jpeg">
+            <div class="text">
+                <h3>Title: <span>harry potter</span> </h3>
+                </h2>
+                <h3> Författare: <span> av HAIJERFNER</span></h3>
+                <h3>Antal sidor:<span>30 sidor</span>
+                </h3>
+                <h3>Utgivningsdatum:<span> 2020</span></h3>
+            </div>
+            <button>spara till favourite</button>
+
+        </div> -->
+
+        </div>
+        <div class="register">
+            <div class="resgister-section">
+                <input type="text" placeholder=" username..." id="register-username">
+                <input type="email" placeholder=" email..." id="register-email">
+                <input type="password" placeholder=" password..." id="register-password">
+                <button id="register-btn">register</button>
+
+
+            </div>
+
+        </div>
+
+        <div class="login">
+            <div class="login-section">
+                <input type="text" placeholder="  enter username or email..." id="login-username">
+                <input type="password" placeholder=" enter password..." id="login-password">
+                <button id="login-btn"> log in</button>
+
+
+            </div>
+
+        </div>
+    </main>
+    <div class="foot">
+        <div class="logo">
+            <img src="../foto/logo 1.png">
+        </div>
+        <div class="social-media">
+            <h4>följa oss på </h4>
+            <a href="https://www.youtube.com/"> <i class="fa-brands fa-youtube"></i> youtube</a>
+
+            <a href="https://www.facebook.com/"> <i class="fa-brands fa-facebook"></i> facebook </a>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i> linkedin</a>
+            <a href="https://www.instagram.com/"> <i class="fa-brands fa-instagram"></i> instagram </a>
+            <a href="https://twitter.com/"> <i class="fa-brands fa-square-x-twitter"></i> twitter</a>
+        </div>
+        <p>copyright©2010</p>
+        <div class="search-div">
+            <input type="text" placeholder=" Search with Author name or Book name" id="search-choosenBook">
+            <div class="sortering-wrapper">
+
+            </div>
+        </div>
+        <div class="test"></div>
+
+        <!-- <script src="main.js"></script> -->
+        <script src="private.js"></script>
+
+
+</body>
+
+</html>
