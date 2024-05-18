@@ -506,9 +506,8 @@ nav .choosen-book {
 
 .sms {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px
 }
 
 #please-login {
@@ -849,6 +848,8 @@ main {
     }
     .sms {
         flex-direction: column;
+        justify-content: center;
+        gap: 10px;
     }
     #please-login {
         width: 70%

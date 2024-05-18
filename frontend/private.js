@@ -333,13 +333,13 @@ let ratevalues=document.querySelectorAll("#rateValue")
         addRating(stars)
         })
      num.innerHTML=choosenBook.childElementCount
-     
+     showbookdiv(num,choosenBook)
          }
      
      //showChoosenBook()
     
 /// delete function
-let deleteFunction=async(bookId)=>{
+let deleteFunction=async(bookId,event)=>{
     choosenBook.innerHTML=""
  let putresponse= await axios.put(`http://localhost:1335/api/book-privates/${bookId}?populate=*`,{
     data:{
@@ -351,12 +351,15 @@ let deleteFunction=async(bookId)=>{
 
      }
  }
+
 )
+
  showChoosenBook()
  
  }
 // logout function
 logoutBtn.addEventListener("click",()=>{
+    window.location = "index.html"
     name.classList.remove("show")
     bookList.classList.remove("show")
     choosenBook.classList.remove("show")
@@ -368,8 +371,7 @@ logoutBtn.addEventListener("click",()=>{
     registerLink.style.display="block";
     loginLink.style.display="block";
     sessionStorage.clear()
-    location.reload()
-    //showChoosenBook()
+    //location.reload()
  
  })
 
@@ -705,7 +707,6 @@ function sorteringChoosenBook(books){
                     return 0;
                 })
                sortZA.forEach((el)=>{
-                    console.log(el.img.url)
                    let newDiv=document.createElement("div")
               newDiv.classList.add("section")
               newDiv.innerHTML=`
@@ -872,7 +873,6 @@ radio.addEventListener("click",(e)=>{
             return(Number(b.rateValue)-Number(a.rateValue))
         })
         decendingsort.forEach((el)=>{
-            console.log(el.img.url)
            let newDiv=document.createElement("div")
       newDiv.classList.add("section")
       newDiv.innerHTML=`
@@ -1007,8 +1007,6 @@ radio.addEventListener("click",(e)=>{
 
     <button onclick="showsms(${el.id},this)">spara till favourite</button>
     </div>
-
-
             
           </div>
                   `
@@ -1017,3 +1015,12 @@ radio.addEventListener("click",(e)=>{
      return sectiondiv
  }
 
+function showbookdiv(num,choosenBook){
+if(num.innerHTML<1){
+    choosenBook.classList.remove("show")
+}
+else{
+    choosenBook.classList.add("show")
+  
+}
+}
